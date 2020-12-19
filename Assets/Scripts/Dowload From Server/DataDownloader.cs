@@ -33,10 +33,10 @@ public class DataDownloader : MonoBehaviour
 
     public void GetUsersData(string url, Action<string> onError, Action<UserStruct[]> onSuccess)
     {
-        StartCoroutine(GetUserDataCoroutine(url, onError, onSuccess));
+        StartCoroutine(GetUsersDataCoroutine(url, onError, onSuccess));
     }
 
-    private IEnumerator GetUserDataCoroutine(string url, Action<string> onError, Action<UserStruct[]> onSuccess)
+    private IEnumerator GetUsersDataCoroutine(string url, Action<string> onError, Action<UserStruct[]> onSuccess)
     {
         using (UnityWebRequest request = UnityWebRequest.Get(url))
         {
@@ -45,7 +45,11 @@ public class DataDownloader : MonoBehaviour
             if (request.isNetworkError || request.isHttpError)
                 onError(request.error);
             else
-                onSuccess(JsonHelper.GetArray<UserStruct>(request.downloadHandler.text));
+            {
+                UserStruct[] users = JsonHelper.GetArray<UserStruct>(request.downloadHandler.text);
+                //StartCoroutine(SetUsersAvatars(users));
+                onSuccess(users);
+            }
         }
     }
 }

@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c18be0809b5b7c43be0bb7cc8dd4676, type: 3}
   m_Name: Wheat
   m_EditorClassIdentifier: 
-  foodImage: {fileID: 21300000, guid: 2e2955ad3ac231348abff99bef22ac54, type: 3}
-  foodName: "\u041F\u0448\u0435\u043D\u0438\u0446\u0430"
-  foodPriceFrom: 1
-  foodPriceTo: 5
+  Image: {fileID: 21300000, guid: 2e2955ad3ac231348abff99bef22ac54, type: 3}
+  Name: "\u041F\u0448\u0435\u043D\u0438\u0446\u0430"

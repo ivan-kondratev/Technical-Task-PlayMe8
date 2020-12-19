@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PrimitiveExtensions
+public static class MathExtensions
 {
     /// <summary>
     /// Round <paramref name="value"/> to <paramref name="decimalPlaces"/> decimal places.

@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 4658091051476501910}
   - component: {fileID: 4658091051476501911}
   - component: {fileID: 4658091051476501908}
+  - component: {fileID: 1443971455}
   m_Layer: 5
   m_Name: Items Scroll View
   m_TagString: Untagged
@@ -286,7 +287,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4658091051476501993}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
@@ -322,6 +323,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1443971455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4658091051476501993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding: {x: 0, y: 0, z: 0, w: 0}
+  m_Softness: {x: 0, y: 0}
 --- !u!1 &4658091052651994679
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,15 +428,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemTemplate: {fileID: 2869839173850218568, guid: 416070820505a474f8cc91eacfd10a38, type: 3}
-  itemQuantity: 10
-  foodData:
-  - {fileID: 11400000, guid: 562ca2dc58f037e4689f7de53020af1b, type: 2}
-  - {fileID: 11400000, guid: c05f5766b2b9c1e4da889a427c9f1e7d, type: 2}
-  - {fileID: 11400000, guid: 677147d86b2d010419af28ff3711a8e7, type: 2}
-  - {fileID: 11400000, guid: 05926368b7502774aadf8561f9d6c35f, type: 2}
-  userData: {fileID: 11400000, guid: 6d23a00a045db374aa03926d17bdac31, type: 2}
-  foodQuantityFrom: 1
-  foodQuantityTo: 10
+  butter: {fileID: 11400000, guid: 562ca2dc58f037e4689f7de53020af1b, type: 2}
+  corn: {fileID: 11400000, guid: c05f5766b2b9c1e4da889a427c9f1e7d, type: 2}
+  mushrooms: {fileID: 11400000, guid: 677147d86b2d010419af28ff3711a8e7, type: 2}
+  wheat: {fileID: 11400000, guid: 05926368b7502774aadf8561f9d6c35f, type: 2}
+  JSONURL: https://raw.githubusercontent.com/ivan-kondratev/ivan-kondratev.github.io/master/userdata.json
 --- !u!114 &3033591135827248920
 MonoBehaviour:
   m_ObjectHideFlags: 0

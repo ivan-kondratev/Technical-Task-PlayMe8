@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.Networking;
@@ -42,14 +41,12 @@ public class DataDownloader : MonoBehaviour
         {
             yield return request.SendWebRequest();
 
-            if (request.isNetworkError || request.isHttpError)
-                onError(request.error);
+            if (request.isNetworkError)
+                onError("Не удалось установить соединение с сервером.");
+            else if (request.isHttpError)
+                onError("Не удалось получить данные. Возвращайтесь позже.");
             else
-            {
-                UserStruct[] users = JsonHelper.GetArray<UserStruct>(request.downloadHandler.text);
-                //StartCoroutine(SetUsersAvatars(users));
-                onSuccess(users);
-            }
+                onSuccess(JsonHelper.GetArray<UserStruct>(request.downloadHandler.text));
         }
     }
 }

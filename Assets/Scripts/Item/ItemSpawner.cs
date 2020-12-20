@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Assets.Scripts.User;
+using TMPro;
 
 public class ItemSpawner : MonoBehaviour
 {
@@ -12,15 +13,21 @@ public class ItemSpawner : MonoBehaviour
     [SerializeField] private FoodSO mushrooms;
     [SerializeField] private FoodSO wheat;
 
-    [Header("JSON URL")]
     [SerializeField] private string JSONURL;
+
+    [SerializeField] private TMP_Text errorText;
 
     private DataDownloader dataDownloader;
 
     private void Start()
     {
         dataDownloader = gameObject.GetComponent<DataDownloader>();
-        dataDownloader.GetUsersData(JSONURL, (string error) => Debug.Log("Error: " + error),
+        dataDownloader.GetUsersData(JSONURL,
+            (string error) =>
+            {
+                errorText.enabled = true;
+                errorText.text = error;
+            },
             (UserStruct[] users) => SpawnItems(itemTemplate, users));
     }
 

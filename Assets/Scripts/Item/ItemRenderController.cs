@@ -1,13 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ItemRenderController : MonoBehaviour
 {
     [SerializeField] private GameObject panel;
     private RectTransform itemRect;
     private Camera mainCamera;
-    private bool visible;
 
     private void Start()
     {

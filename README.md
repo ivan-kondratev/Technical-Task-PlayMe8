@@ -1,3 +1,4 @@
 # Technical-Task-PlayMe8
-Текст с заданием
+Задание:
+
 https://docs.google.com/document/d/1R_AR-M4PlHoxdYxFGQYlDnmmNgbqdpMIhWqc8DoHYIc/edit

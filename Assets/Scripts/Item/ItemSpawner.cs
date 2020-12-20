@@ -16,6 +16,7 @@ public class ItemSpawner : MonoBehaviour
     [SerializeField] private string JSONURL;
 
     [SerializeField] private TMP_Text errorText;
+    [SerializeField] private TMP_Text downloadText;
 
     private DataDownloader dataDownloader;
 
@@ -25,6 +26,7 @@ public class ItemSpawner : MonoBehaviour
         dataDownloader.GetUsersData(JSONURL,
             (string error) =>
             {
+                DisableDownloadText();
                 errorText.enabled = true;
                 errorText.text = error;
             },
@@ -33,6 +35,7 @@ public class ItemSpawner : MonoBehaviour
 
     private void SpawnItems(GameObject itemTemplate, UserStruct[] users)
     {
+        DisableDownloadText();
         for (int i = 0; i < users.Length; i++)
         {
             GameObject tempGameObject = Instantiate(itemTemplate, transform);
@@ -82,5 +85,10 @@ public class ItemSpawner : MonoBehaviour
         }
         food.Quantity = user.FoodQuantity;
         food.Price = user.FoodPriceForOneItem * food.Quantity;
+    }
+
+    private void DisableDownloadText()
+    {
+        downloadText.enabled = false;
     }
 }

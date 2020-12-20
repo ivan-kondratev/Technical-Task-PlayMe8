@@ -380,6 +380,7 @@ MonoBehaviour:
   wheat: {fileID: 11400000, guid: 05926368b7502774aadf8561f9d6c35f, type: 2}
   JSONURL: https://raw.githubusercontent.com/ivan-kondratev/ivan-kondratev.github.io/master/userdata.json
   errorText: {fileID: 0}
+  downloadText: {fileID: 0}
 --- !u!114 &3033591135827248920
 MonoBehaviour:
   m_ObjectHideFlags: 0

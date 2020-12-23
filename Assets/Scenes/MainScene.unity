@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 155725747}
   - component: {fileID: 155725750}
   m_Layer: 5
-  m_Name: Down
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -476,10 +476,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc46dc319066b6744b3cb5d5abd6b2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 1
+  direction: 0
   stepSize: 1
   scrollFrequency: 1
-  scrollbar: {fileID: 480875784}
+  scrollbar: {fileID: 601538212}
   scrollElementsContainer: {fileID: 1724937892}
 --- !u!1 &267326712
 GameObject:
@@ -737,17 +737,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298265876}
   m_CullTransparentMesh: 0
---- !u!114 &480875784 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3874743222366149203, guid: a2388535925141340a8c67302c254a33, type: 3}
-  m_PrefabInstance: {fileID: 4658091052225204439}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +820,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &601538212 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 601538212, guid: a2388535925141340a8c67302c254a33, type: 3}
+  m_PrefabInstance: {fileID: 4658091052225204439}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &745909034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,7 +1964,7 @@ GameObject:
   - component: {fileID: 1901894444}
   - component: {fileID: 1901894447}
   m_Layer: 5
-  m_Name: Up
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2083,10 +2083,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc46dc319066b6744b3cb5d5abd6b2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: 0
+  direction: 1
   stepSize: 1
   scrollFrequency: 1
-  scrollbar: {fileID: 480875784}
+  scrollbar: {fileID: 601538212}
   scrollElementsContainer: {fileID: 1724937892}
 --- !u!1 &1905053554
 GameObject:
@@ -2368,6 +2368,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1654191494}
     m_Modifications:
+    - target: {fileID: 1994443166, guid: a2388535925141340a8c67302c254a33, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994443166, guid: a2388535925141340a8c67302c254a33, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4658091051476501992, guid: a2388535925141340a8c67302c254a33, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2465,15 +2473,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1548587850}
     - target: {fileID: 4658091052651994678, guid: a2388535925141340a8c67302c254a33, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7932492649457852514, guid: a2388535925141340a8c67302c254a33, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7932492649457852514, guid: a2388535925141340a8c67302c254a33, type: 3}
-      propertyPath: m_AnchorMax.y
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
